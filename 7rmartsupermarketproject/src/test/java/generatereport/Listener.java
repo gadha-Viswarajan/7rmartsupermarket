@@ -17,8 +17,8 @@ public class Listener implements ITestListener
 	{
 		ExtentTest test;
 
-		ExtentReports extent =ExtendReportUtility.createExtentReports();
-		ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
+		ExtentReports extent =ExtendReportUtility.createExtentReports();//extend report utility stored in extent variable
+		ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();//threadlocal used to prevents overlapping of methods
 
 	public void onTestStart(ITestResult result) {// calls when test methods starts
 		ITestListener.super.onTestStart(result);
