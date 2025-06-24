@@ -10,11 +10,11 @@ import org.openqa.selenium.support.ui.Select;
 public class PageUtilities 
 {
 WebDriver driver;
-public void selectByIndex( WebElement element,Integer value)//value is the selected value from dropdown.
+public void selectByIndex( WebElement element,Integer value1)//value is the selected value from dropdown.
 	{
 
 	Select select=new Select(element);
-	select.selectByIndex(value);
+	select.selectByIndex(value1);
 	}
 public void selectByValue(WebElement element,String Value)
 {
