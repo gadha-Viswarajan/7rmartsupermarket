@@ -16,7 +16,7 @@ public class Logintest extends Base {
 
 	Homepage home;
 
-	@Test
+	@Test(groups = {"smoke test"})
 	public void validateWhetherUserCanAbleToLoginWithValidCredentials() throws IOException {
 
 		Loginpageproject loginpageproject = new Loginpageproject(driver);
@@ -29,7 +29,7 @@ public class Logintest extends Base {
 
 	}
 
-	@Test
+	@Test(groups = {"smoke test"})
 	public void ValidateWhetherUserCantAbleToLoginWithInvalidCredentials() {
 		Loginpageproject loginpageproject = new Loginpageproject(driver);
 		loginpageproject.enterUsernameAndPassword("adminnn", "admin123");
@@ -44,7 +44,7 @@ public class Logintest extends Base {
 		loginpageproject.clickSignIn();
 	}
 
-	@Test(dataProvider = "credentials")
+	@Test(dataProvider = "credentials",groups = {"regression testing"})
 	public void dataprovider(String username, String password) {
 		Loginpageproject loginpageproject = new Loginpageproject(driver);
 		loginpageproject.enterUsernameAndPassword(username, password);

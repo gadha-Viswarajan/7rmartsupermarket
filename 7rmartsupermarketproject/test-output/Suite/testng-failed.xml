@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Edge test(failed)">
-    <parameter name="Browser" value="Edge"/>
+  <parameter name="Browser" value="chrome"/>
+  <test thread-count="5" name="Grouping(failed)">
+    <groups>
+      <run>
+        <include name="smoke test"/>
+      </run>
+    </groups>
     <classes>
-      <class name="mainprojecttesting.Adminuserstest">
+      <class name="mainprojecttesting.Logintest">
         <methods>
-          <include name="validateWhetherUserCanAbleToSaveUsersInAdminuserPage"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
+          <include name="validateWhetherUserCanAbleToLoginWithValidCredentials"/>
+          <include name="ValidateWhetherUserCantAbleToLoginWithInvalidCredentials"/>
         </methods>
-      </class> <!-- mainprojecttesting.Adminuserstest -->
+      </class> <!-- mainprojecttesting.Logintest -->
     </classes>
-  </test> <!-- Edge test(failed) -->
+  </test> <!-- Grouping(failed) -->
 </suite> <!-- Failed suite [Suite] -->
