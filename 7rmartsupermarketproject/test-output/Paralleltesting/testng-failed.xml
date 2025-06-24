@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [Paralleltesting]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="Chrome test(failed)">
+    <parameter name="Browser" value="chrome"/>
+    <classes>
+      <class name="mainprojecttesting.Adminuserstest">
+        <methods>
+          <include name="validateWhetherUserCanAbleToSaveUsersInAdminuserPage"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- mainprojecttesting.Adminuserstest -->
+      <class name="mainprojecttesting.Managenewstesting">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="verifyUserCanAbleToClickManageNewsButton"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- mainprojecttesting.Managenewstesting -->
+    </classes>
+  </test> <!-- Chrome test(failed) -->
+</suite> <!-- Failed suite [Paralleltesting] -->
